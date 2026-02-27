@@ -1,0 +1,179 @@
+@layer theme {
+  :root {
+    /* Brand Colors */
+    --ia-orange: #f85838;
+    --ia-orange-hover: #ff6a4d;
+    --ia-orange-dark: #e04425;
+    --ia-black: #221f1f;
+    --ia-black-hover: #353332;
+    --ia-grey-veil: #dededb;
+    --ia-white-marble: #f7f6f5;
+    
+    /* Silk/Stone Extended Palette */
+    --ia-silk-100: #f5f3f0;
+    --ia-silk-200: #e8e4df;
+    --ia-silk-300: #d6d2cd;
+    --ia-silk-400: #c7c0b8;
+    --ia-carrara: #eae8e5;
+    --ia-travertine: #d8d4cf;
+    --ia-limestone: #b5aea6;
+    --ia-granite: #8f877d;
+    
+    /* Verdigris Accent */
+    --ia-verdigris-100: #e6f0ec;
+    --ia-verdigris-200: #b3d4c7;
+    --ia-verdigris-300: #7db3a0;
+    --ia-verdigris-400: #5e8c7b;
+    --ia-verdigris-500: #4a7060;
+    
+    /* Semantic Colors */
+    --ia-success: #3a7d5c;
+    --ia-success-bg: #e8f4ed;
+    --ia-warning: #c4933f;
+    --ia-warning-bg: #fef5e6;
+    --ia-error: #c53d2f;
+    --ia-error-bg: #fce8e6;
+    --ia-info: #5b7b8d;
+    --ia-info-bg: #eaf0f4;
+    
+    /* Glass Tokens */
+    --ia-glass-dark: rgba(40, 37, 37, 0.85);
+    --ia-glass-light: rgba(255, 255, 255, 0.08);
+    --ia-glass-border: rgba(255, 255, 255, 0.08);
+    --ia-glass-blur: blur(24px);
+    --ia-glass-blur-sm: blur(12px);
+    
+    /* Text Colors */
+    --ia-text-primary: #000000;
+    --ia-text-secondary: #6e6c6a;
+    --ia-text-on-dark-primary: #f7f6f5;
+    --ia-text-on-dark-secondary: #b5aea6;
+    --ia-text-on-dark-tertiary: #8f877d;
+    
+    /* Spacing (8px base grid) */
+    --ia-space-1: 4px;
+    --ia-space-2: 8px;
+    --ia-space-3: 12px;
+    --ia-space-4: 16px;
+    --ia-space-5: 24px;
+    --ia-space-6: 32px;
+    --ia-space-7: 48px;
+    --ia-space-8: 64px;
+    --ia-space-9: 96px;
+    --ia-space-10: 128px;
+    --ia-space-11: 160px;
+    
+    /* Responsive Spacing Tokens */
+    --section-pad-y: 56px;
+    --nav-height: 56px;
+    --hero-pad-top: 96px;
+    --hero-pad-bottom: 56px;
+    
+    /* Border Radius */
+    --ia-radius-sm: 2px;
+    --ia-radius-interactive: 12px;
+    --ia-radius-container: 14px;
+    --ia-radius-lg: 12px;
+    
+    /* Transitions */
+    --ia-ease-default: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --ia-ease-enter: cubic-bezier(0, 0, 0.2, 1);
+    --ia-ease-exit: cubic-bezier(0.4, 0, 1, 1);
+    --ia-duration-instant: 100ms;
+    --ia-duration-fast: 200ms;
+    --ia-duration-normal: 350ms;
+    --ia-duration-slow: 500ms;
+    --ia-duration-glacial: 800ms;
+    
+    /* Typography */
+    font-family: 'Aktiv Grotesk', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Responsive token overrides */
+  @media (min-width: 768px) {
+    :root {
+      --section-pad-y: 80px;
+      --hero-pad-top: 128px;
+      --hero-pad-bottom: 80px;
+    }
+  }
+  @media (min-width: 1024px) {
+    :root {
+      --nav-height: 64px;
+      --section-pad-y: 96px;
+      --hero-pad-top: 128px;
+      --hero-pad-bottom: 96px;
+    }
+  }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* Body defaults */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: var(--ia-text-primary);
+    font-family: 'Aktiv Grotesk', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  
+  /* Headings */
+  h1 {
+    font-family: 'Aktiv Grotesk Extended', sans-serif;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    font-family: 'Aktiv Grotesk', sans-serif;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h3, h4 {
+    font-family: 'Aktiv Grotesk', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+  
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+    font-family: inherit;
+  }
+  
+  /* Focus styles */
+  *:focus-visible {
+    outline: 2px solid rgba(248, 88, 56, 0.6);
+    outline-offset: 2px;
+  }
+  
+  /* Selection */
+  ::selection {
+    background-color: rgba(248, 88, 56, 0.2);
+    color: var(--ia-text-primary);
+  }
+}
